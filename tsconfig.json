@@ -21,7 +21,8 @@
       "data/*": ["./data/*"],
       "pages/*": ["./pages/*"],
       "store/*": ["./store/*"],
-      "test/*": ["./test/*"]
+      "test/*": ["./test/*"],
+      "test-utils": ["./utils/test-utils"]
     }
   },
   "include": ["src/**/*", "jest.setupAfterEnv.ts"]

@@ -1,4 +1,4 @@
-import { PaginationInfo } from 'features/pagination';
+import { PaginationInfo } from "features/pagination";
 
 export interface LocationsResult {
   results: Location[];

@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import { CharactersComponent } from 'features/characters';
-import { Location } from 'features/locations';
-import { withLoading } from 'features/loading';
+import { FC } from "react";
+import { CharactersComponent } from "features/characters";
+import { Location } from "features/locations";
+import { withLoading } from "features/loading";
 
 export type LocationDetailComponentProps = {
   location?: Location;
@@ -12,7 +12,7 @@ const LocationDetailComponent: FC<LocationDetailComponentProps> = ({
 }: LocationDetailComponentProps) => {
   if (!location) return <></>;
   const characterIds = location.residents.map((resident) =>
-    parseInt(resident.split('character')[1].replace('/', ''), 10)
+    parseInt(resident.split("character")[1].replace("/", ""), 10)
   );
 
   return (

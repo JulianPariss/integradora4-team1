@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import PaginationInfo from 'features/pagination/pagination.types';
+import { FC } from "react";
+import PaginationInfo from "features/pagination/pagination.types";
 
 type PaginationProps = {
   pagination: PaginationInfo;
@@ -21,11 +21,11 @@ const Pagination: FC<PaginationProps> = ({
   };
 
   return (
-    <div className={'pagination'}>
-      <button disabled={!pagination.prev} onClick={() => onPrev()} className={'button primary'}>
+    <div className={"pagination"}>
+      <button disabled={!pagination.prev} onClick={() => onPrev()} className={"button primary"}>
         Previous
       </button>
-      <button disabled={!pagination.next} onClick={() => onNext()} className={'button primary'}>
+      <button disabled={!pagination.next} onClick={() => onNext()} className={"button primary"}>
         Next
       </button>
     </div>

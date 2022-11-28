@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import CharactersComponent from 'features/characters/characters.component';
-import { useAppSelector } from 'store/hooks';
+import { FC } from "react";
+import CharactersComponent from "features/characters/characters.component";
+import { useAppSelector } from "store/hooks";
 
 const FollowingComponent: FC = () => {
   const { followingIds } = useAppSelector((state) => state.following);

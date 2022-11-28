@@ -1,13 +1,13 @@
-import { Character } from 'features/characters';
-import { FC } from 'react';
-import { FollowingButtonComponent } from 'features/following/button';
-import { useAppDispatch, useAppSelector } from 'store/hooks';
+import { Character } from "features/characters";
+import { FC } from "react";
+import { FollowingButtonComponent } from "features/following/button";
+import { useAppDispatch, useAppSelector } from "store/hooks";
 import {
   addCharacterToFollowingList,
   removeCharacterToFollowingList
-} from 'features/following/following.slices';
-import { Card } from 'features/card';
-import CardBody from 'features/card/card-body.component';
+} from "features/following/following.slices";
+import { Card } from "features/card";
+import CardBody from "features/card/card-body.component";
 
 export type CharacterCardProps = {
   character: Character;

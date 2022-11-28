@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export type LocationsState = {
   query: string;
@@ -6,12 +6,12 @@ export type LocationsState = {
 };
 
 const initialState: LocationsState = {
-  query: '',
+  query: "",
   page: 1
 };
 
 const locationsSlice = createSlice({
-  name: 'locations',
+  name: "locations",
   initialState,
   reducers: {
     searchLocations: (state, action: PayloadAction<string>) => {

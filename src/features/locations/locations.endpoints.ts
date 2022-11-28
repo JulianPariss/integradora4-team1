@@ -1,5 +1,5 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { Location, LocationsResult } from 'features/locations';
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { Location, LocationsResult } from "features/locations";
 
 type GetLocationsProps = {
   name: string;
@@ -11,9 +11,9 @@ type GetLocationProps = {
 };
 
 export const locationsApi = createApi({
-  reducerPath: 'locationsApi',
+  reducerPath: "locationsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://rickandmortyapi.com/api/location/'
+    baseUrl: "https://rickandmortyapi.com/api/location/"
   }),
   endpoints: (builder) => ({
     getLocations: builder.query<LocationsResult, GetLocationsProps>({

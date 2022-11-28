@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import { useGetCharactersQuery } from 'features/characters/characters.endpoints';
-import { CharacterCardComponent } from 'features/characters/card';
-import { CharactersWrapper } from './characters.styles';
+import { FC } from "react";
+import { useGetCharactersQuery } from "features/characters/characters.endpoints";
+import { CharacterCardComponent } from "features/characters/card";
+import { CharactersWrapper } from "./characters.styles";
 
 export type CharactersComponentProps = {
   ids: number[];

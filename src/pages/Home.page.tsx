@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import { LocationsComponent } from 'features/locations';
+import { FC } from "react";
+import { LocationsComponent } from "features/locations";
 
 /**
  * HomePage
@@ -10,7 +10,7 @@ import { LocationsComponent } from 'features/locations';
  * @returns the home page
  */
 const HomePage: FC = () => (
-  <div className={'container'}>
+  <div className={"container"}>
     <LocationsComponent />
   </div>
 );

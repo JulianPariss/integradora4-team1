@@ -1,9 +1,9 @@
-import { FC } from 'react';
-import { LocationsTable } from 'features/locations/table';
-import { useGetLocationsQuery } from 'features/locations/locations.endpoints';
-import { useAppDispatch, useAppSelector } from 'store/hooks';
-import { Pagination } from 'features/pagination';
-import { nextLocations, previousLocations } from 'features/locations/locations.slices';
+import { FC } from "react";
+import { LocationsTable } from "features/locations/table";
+import { useGetLocationsQuery } from "features/locations/locations.endpoints";
+import { useAppDispatch, useAppSelector } from "store/hooks";
+import { Pagination } from "features/pagination";
+import { nextLocations, previousLocations } from "features/locations/locations.slices";
 
 const LocationsComponent: FC = () => {
   const dispatch = useAppDispatch();

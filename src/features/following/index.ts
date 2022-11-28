@@ -1,5 +1,5 @@
-import FollowingComponent from './following.component';
+import FollowingComponent from "./following.component";
 
-import followingReducer from './following.slices';
+import followingReducer from "./following.slices";
 
 export { FollowingComponent, followingReducer };

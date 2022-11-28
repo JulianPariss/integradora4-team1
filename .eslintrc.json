@@ -45,7 +45,8 @@
         "ignorePattern": "d=\"([\\s\\S]*?)\""
       }
     ],
-    "react/jsx-one-expression-per-line": ["off"]
+    "react/jsx-one-expression-per-line": ["off"],
+    "prettier/prettier": ["error", { "singleQuote": false }]
   },
   "settings": {
     "import/resolver": {

@@ -3,12 +3,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 0;
-  font-family: Helvetica,  sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .container {
@@ -21,7 +20,7 @@ code {
 }
 
 /** BUTTON STYLES **/
-.button{
+.button {
   cursor: pointer;
   padding: 10px 20px;
   font-size: 16px;
@@ -32,13 +31,13 @@ code {
   color: white;
 }
 .button.primary {
-  background-color:rgb(10, 77, 157)
+  background-color: rgb(10, 77, 157);
 }
 
 .button:disabled {
-   cursor: inherit;
-   background-color: rgb(128, 134, 140);
- }
+  cursor: inherit;
+  background-color: rgb(128, 134, 140);
+}
 
 .icon-button {
   background-color: transparent;
@@ -47,7 +46,7 @@ code {
 }
 
 /** TABLE STYLES **/
-table{
+table {
   font-size: 0.9rem;
   width: 100%;
   color: #212529;
@@ -66,7 +65,7 @@ table tr:hover {
 }
 
 table th {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 table th,

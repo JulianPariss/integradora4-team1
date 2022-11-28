@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import { Location } from 'features/locations';
-import { useNavigate } from 'react-router-dom';
-import useTracking from 'features/tracking/tracking.context';
+import { FC } from "react";
+import { Location } from "features/locations";
+import { useNavigate } from "react-router-dom";
+import useTracking from "features/tracking/tracking.context";
 
 export type LocationsTableProps = {
   locations: Location[];
@@ -27,8 +27,9 @@ const LocationsTable: FC<LocationsTableProps> = ({ locations }: LocationsTablePr
             key={location.id}
             onClick={() => {
               navigate(`/location/${location.id}`);
-              trackEvent('LOCATION_CLICKED', 'LOCATION_TABLE');
-            }}>
+              trackEvent("LOCATION_CLICKED", "LOCATION_TABLE");
+            }}
+          >
             <td>#{location.id}</td>
             <td>{location.name}</td>
             <td>{location.type}</td>

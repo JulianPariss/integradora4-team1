@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC } from "react";
 
 type FollowingButtonProps = {
   isFav: boolean;
@@ -9,11 +9,11 @@ const FollowingButtonComponent: FC<FollowingButtonProps> = ({
   isFav,
   onToggleFavorite
 }: FollowingButtonProps) => {
-  const src = isFav ? '/images/star-filled.png' : '/images/star.png';
-  const alt = isFav ? 'is_favorite' : 'is_not_favorite';
+  const src = isFav ? "/images/star-filled.png" : "/images/star.png";
+  const alt = isFav ? "is_favorite" : "is_not_favorite";
 
   return (
-    <button className={'following-button'} onClick={() => onToggleFavorite(!isFav)}>
+    <button className={"following-button"} onClick={() => onToggleFavorite(!isFav)}>
       <img src={src} alt={alt} />
     </button>
   );

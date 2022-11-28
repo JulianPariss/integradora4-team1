@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import { LocationDetailContainer } from 'features/locations/detail';
+import { FC } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { LocationDetailContainer } from "features/locations/detail";
 
 /**
  * Location page
@@ -14,12 +14,12 @@ const LocationPage: FC = () => {
   const params = useParams();
   const navigate = useNavigate();
   if (!params.id) {
-    navigate('/');
+    navigate("/");
     return <></>;
   }
   return (
     <div>
-      <div className={'container'}>
+      <div className={"container"}>
         <LocationDetailContainer id={parseInt(params.id, 10)} />
       </div>
     </div>

@@ -1,10 +1,10 @@
-import { createContext, FC, useContext, useMemo, useState } from 'react';
+import { createContext, FC, useContext, useMemo, useState } from "react";
 import {
   AmplitudeTrackingSoftware,
   FacebookTrackingSoftware,
   GoogleTrackingSoftware
-} from 'features/tracking/software';
-import { Initializable, isInitializable, TrackingSoftware } from 'features/tracking/tracking.types';
+} from "features/tracking/software";
+import { Initializable, isInitializable, TrackingSoftware } from "features/tracking/tracking.types";
 
 export interface TrackingState {
   trackingSoftwares: (TrackingSoftware | Initializable)[];
@@ -40,7 +40,7 @@ export const TrackingProvider: FC = ({ children }) => {
 const useTracking = (): TrackingState => {
   const context = useContext(TrackingContext);
   if (!context) {
-    throw new Error('useTracking must be used within a TrackingProvider');
+    throw new Error("useTracking must be used within a TrackingProvider");
   }
   return context;
 };

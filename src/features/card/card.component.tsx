@@ -1,7 +1,7 @@
-import { FC, PropsWithChildren } from 'react';
-import CardImage from 'features/card/card-image.component';
-import CardBody from 'features/card/card-body.component';
-import {CardWrapper} from "features/card/card.styles";
+import { FC, PropsWithChildren } from "react";
+import CardImage from "features/card/card-image.component";
+import CardBody from "features/card/card-body.component";
+import { CardWrapper } from "features/card/card.styles";
 
 type CompoundCard = FC<PropsWithChildren<object>> & {
   Image: FC<PropsWithChildren<object>>;

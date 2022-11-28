@@ -1,2 +1,2 @@
-type Languages = 'SPANISH' | 'ENGLISH' | 'PORTUGUESE';
+type Languages = "SPANISH" | "ENGLISH" | "PORTUGUESE";
 export default Languages;

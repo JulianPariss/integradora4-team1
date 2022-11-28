@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export type FollowingState = {
   followingIds: number[];
@@ -9,7 +9,7 @@ const initialState: FollowingState = {
 };
 
 const followingSlice = createSlice({
-  name: 'following',
+  name: "following",
   initialState,
   reducers: {
     addCharacterToFollowingList: (state, action: PayloadAction<number>) => {

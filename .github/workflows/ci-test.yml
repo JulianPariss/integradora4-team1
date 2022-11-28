@@ -1,12 +1,11 @@
 on:
   pull_request:
-    types: [ opened, synchronize, reopened ]
+    types: [opened, synchronize, reopened]
 
 name: CI Test Suite
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:

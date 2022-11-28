@@ -1,5 +1,5 @@
-import { ComponentType } from 'react';
-import { LoadingComponent } from 'features/loading/index';
+import { ComponentType } from "react";
+import { LoadingComponent } from "features/loading/index";
 
 interface WithLoadingProps {
   loading: boolean;

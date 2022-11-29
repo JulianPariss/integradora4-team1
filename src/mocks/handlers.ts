@@ -3,6 +3,7 @@ import { rest } from "msw";
 export const handlers = [
   rest.get("https://rickandmortyapi.com/api/location/", (_, res, ctx) =>
     res(
+      ctx.status(403),
       ctx.json({
         info: {
           count: 108,

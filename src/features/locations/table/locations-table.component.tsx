@@ -28,8 +28,7 @@ const LocationsTable: FC<LocationsTableProps> = ({ locations }: LocationsTablePr
             onClick={() => {
               navigate(`/location/${location.id}`);
               trackEvent("LOCATION_CLICKED", "LOCATION_TABLE");
-            }}
-          >
+            }}>
             <td>#{location.id}</td>
             <td>{location.name}</td>
             <td>{location.type}</td>

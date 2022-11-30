@@ -42,4 +42,12 @@ describe("LocationsComponent", () => {
     expect(await screen.findByText("Abadango")).toBeInTheDocument();
     expect(await screen.findByText("unknown")).toBeInTheDocument();
   });
+
+  /**
+   * 1. Renderizar App
+   * 2. Buscar el input
+   * 3. Generar el evento onChange en el input
+   * 4. Cambiar nuestro handler para que retorne data distinta, dependiendo del query param "name"
+   * 5. Expect screen.findByText("Nueva data")
+   */
 });

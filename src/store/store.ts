@@ -11,13 +11,16 @@ const rootReducer = combineReducers({
   following: followingReducer
 });
 
-export const store = configureStore({
-  reducer: rootReducer,
-  // Adding the api middleware enables caching, invalidation, polling,
-  // and other useful features of `rtk-query`.
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(locationsApi.middleware).concat(charactersApi.middleware)
-});
+export const makeStore = () =>
+  configureStore({
+    reducer: rootReducer,
+    // Adding the api middleware enables caching, invalidation, polling,
+    // and other useful features of `rtk-query`.
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(locationsApi.middleware).concat(charactersApi.middleware)
+  });
+
+export const store = makeStore();
 
 // Infiere los tipos del `RootState` y `AppDispatch` de la store
 export type RootState = ReturnType<typeof store.getState>;

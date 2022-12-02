@@ -3,6 +3,16 @@ import { customRender } from "utils/test-utils";
 import { fireEvent, screen, waitFor } from "@testing-library/react";
 import { server } from "mocks/server";
 import { errorHandlers } from "mocks/errorHandlers";
+import { LocationsTableProps } from "features/locations/table";
+
+// const mockChildComponent = jest.fn();
+// jest.mock(
+//   "features/locations/table/locations-table.component",
+//   () => (props: LocationsTableProps) => {
+//     mockChildComponent(props);
+//     return <div>Componente</div>;
+//   }
+// );
 
 describe("LocationsComponent", () => {
   it("should render loading by default", () => {
@@ -42,4 +52,26 @@ describe("LocationsComponent", () => {
     expect(await screen.findByText("Abadango")).toBeInTheDocument();
     expect(await screen.findByText("unknown")).toBeInTheDocument();
   });
+
+  // it("should bring new data when paginating v2", async () => {
+  //   customRender(<LocationsComponent />);
+  //   const [button] = await screen.findAllByText("Next");
+  //   fireEvent.click(button);
+
+  //   await waitFor(() => {
+  //     expect(mockChildComponent).lastCalledWith(
+  //       expect.objectContaining({
+  //         locations: [
+  //           {
+  //             id: 2,
+  //             name: "Abadango",
+  //             type: "Cluster",
+  //             dimension: "unknown",
+  //             residents: ["https://rickandmortyapi.com/api/character/6"]
+  //           }
+  //         ]
+  //       })
+  //     );
+  //   });
+  // });
 });

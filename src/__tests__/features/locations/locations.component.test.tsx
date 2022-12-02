@@ -1,9 +1,10 @@
 import { LocationsComponent } from "features/locations";
 import { customRender } from "utils/test-utils";
 import { fireEvent, screen, waitFor } from "@testing-library/react";
-import userEvent from "@testing-library/user-event"
+import userEvent from "@testing-library/user-event";
 import { server } from "mocks/server";
 import { errorHandlers } from "mocks/errorHandlers";
+import { SearchBar } from "features/search";
 
 describe("LocationsComponent", () => {
   it("should render loading by default", () => {
@@ -43,20 +44,4 @@ describe("LocationsComponent", () => {
     expect(await screen.findByText("Abadango")).toBeInTheDocument();
     expect(await screen.findByText("unknown")).toBeInTheDocument();
   });
-
-
-  it("get data containing Abdango", async()=> {
-    customRender(<LocationsComponent/>)
-    const input = screen.getByPlaceholderText("Search...")
-    userEvent.type(input, "Abdango");
-    expect(await screen.findByText("Abadango")).toBeInTheDocument();
-  })
-
-  /**
-   * 1. Renderizar App
-   * 2. Buscar el input
-   * 3. Generar el evento onChange en el input
-   * 4. Cambiar nuestro handler para que retorne data distinta, dependiendo del query param "name"
-   * 5. Expect screen.findByText("Nueva data")
-   */
 });

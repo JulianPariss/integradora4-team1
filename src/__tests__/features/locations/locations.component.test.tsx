@@ -1,6 +1,7 @@
 import { LocationsComponent } from "features/locations";
 import { customRender } from "utils/test-utils";
 import { fireEvent, screen, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event"
 import { server } from "mocks/server";
 import { errorHandlers } from "mocks/errorHandlers";
 
@@ -42,6 +43,14 @@ describe("LocationsComponent", () => {
     expect(await screen.findByText("Abadango")).toBeInTheDocument();
     expect(await screen.findByText("unknown")).toBeInTheDocument();
   });
+
+
+  it("get data containing Abdango", async()=> {
+    customRender(<LocationsComponent/>)
+    const input = screen.getByPlaceholderText("Search...")
+    userEvent.type(input, "Abdango");
+    expect(await screen.findByText("Abadango")).toBeInTheDocument();
+  })
 
   /**
    * 1. Renderizar App

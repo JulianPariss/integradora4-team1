@@ -1,10 +1,8 @@
 import { LocationsComponent } from "features/locations";
 import { customRender } from "utils/test-utils";
 import { fireEvent, screen, waitFor } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { server } from "mocks/server";
 import { errorHandlers } from "mocks/errorHandlers";
-import { SearchBar } from "features/search";
 
 describe("LocationsComponent", () => {
   it("should render loading by default", () => {
